@@ -26,9 +26,10 @@ function App() {
 
   useEffect(() => {
     getShipData();
-    setInterval(() => {
+    var eventSource = new EventSource("http://10.0.0.230:8000/streaming");
+    eventSource.addEventListener("message", function(e) {
       getShipData();
-    }, 5000);
+    });
   }, []);
 
   var barStyleOptions = {
