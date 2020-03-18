@@ -42,7 +42,7 @@ function App() {
   };
 
   function getShipData() {
-    fetch("http://10.0.0.236:8000/api")
+    fetch("http://10.0.0.230:8000/api")
       .then(response => {
         return response.json();
       })
