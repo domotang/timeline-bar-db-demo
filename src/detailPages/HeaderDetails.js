@@ -25,7 +25,7 @@ class HeaderDetails extends React.PureComponent {
   }
 
   componentDidMount() {
-    fetch("http://10.0.0.230:8000/api/" + this.props.headerDetailsId)
+    fetch("http://10.0.0.236:8000/api/" + this.props.headerDetailsId)
       .then(response => {
         return response.json();
       })
