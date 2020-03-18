@@ -26,7 +26,7 @@ function App() {
 
   useEffect(() => {
     getShipData();
-    var eventSource = new EventSource("http://10.0.0.230:8000/streaming");
+    var eventSource = new EventSource("http://10.0.0.230:8000/event");
     eventSource.addEventListener("message", function(e) {
       getShipData();
     });
